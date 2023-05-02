@@ -20,14 +20,14 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["pH scale", "Equipment", "How to", "Abou
 
 with tab1:
     st.header("pH scale")
-    st.image("https://mesinionisasiair.com/images/blog/skalaph.jpg", width=500)
+    st.image("https://media.sciencephoto.com/c0/15/04/35/c0150435-800px-wm.jpg", width=500)
     
 with tab2:
     st.header("Equipment")
     st.write('Berikut adalah alat-alat yang dapat digunakan untuk mengukur pH suatu larutan:')
-    st.image("https://annindonesia.files.wordpress.com/2018/07/digital-ph-meter-side-view-with-beaker-h12002_1.jpg?w-365&h=365", width=350, caption='pH meter')
-    st.image("https://bisakimia.com/wp-content/uploads/2016/09/strip-indikator-ph-e-14-indikator-universal-1369429984-0-1-jpg.jpeg", width=350, caption='pH universal')
-    st.image('https://3.bp.blogspot.com/-Aqcbj2ZpWHB/W-ucQMzNwhI/AAAAAAAAE/twxE7HT6tгAHrzqax7sXUAJSTIxoU85gCLcBGAs/s1600/kertas lakmus.JPG',width=350, caption='kertas lakmus')
+    st.image("https://images.tokopedia.net/img/cache/500-square/product-1/2019/10/7/6412927/6412927_a4c84ac4-43df-4af4-83b2-ca1c4462e14d_1020_1020", width=350, caption='pH meter')
+    st.image("https://img.freepik.com/premium-vector/ph-value-scale-meter-ph-analysis-chemical-scale-value-test-vector-stock-illustration_100456-8181.jpg", width=350, caption='pH universal')
+    st.image('https://play-lh.googleusercontent.com/lR5jVpS8Z326OVNxN1z5PiKp512IrZbhIoU8GqGlJuce1RelMSj2MURBC3o_SbtREm7O',width=350, caption='kertas lakmus')
              
 with tab3:
     st.header("How to use the equipment")
@@ -62,7 +62,7 @@ with tab4:
     
     df
     
-with tabs5:
+with tab5:
     st.header('Penentuan nilai pH')
     
     NamaLarutan= st.text_input('Nama Larutan yang akan dihitung pH-nya:')
@@ -76,11 +76,11 @@ with tabs5:
    if option=="asam kuat":
         jumlah_digit=4
         cons = st.number_input(f'Masukkan konsentrasi larutan dalam Molaritas (M)', format='%.'+str(jumlah_digit)+'f')
-       jumlah_digit1=0
+        jumlah_digit1=0
         val = st.number_input(f'Masukkan valensi larutan', format='%.'+str(jumlah_digit)+'f')
-       H=cons*val
+        H=cons*val
         import numpy as np
-       pH = -1 * np.log10(H)
+        pH = -1 * np.log10(H)
         st.write('pH Larutan', NamaLarutan, 'yang merupakan', option, 'adalah', pH)
         
 elif option=="basa kuat": 
@@ -109,7 +109,7 @@ elif option=="basa lemah":
     jumlah digit-4
     cons=st.number_input(f'Masukkan konsentrasi larutan dalam Molaritas (M)', format='%.'+str(jumlah_digit)+'f')
    jumlah_digit1=6
-    kb = st.number_input(f'Masukan ka dari larutan', format='%.' +str(jumlah_digit1)+"F")
+    kb = st.number_input(f'Masukan kb dari larutan', format='%.' +str(jumlah_digit1)+"F")
     b = cons*kb
     import numpy as np
     OH = np.sqrt(a)
